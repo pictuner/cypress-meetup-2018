@@ -1,6 +1,7 @@
 <template>
-  <panel title="Recently Viewed Songs">
+  <panel data-cy="panel-title" title="Recently Viewed Songs">
     <v-data-table
+      data-cy="data-table"
       :headers="headers"
       :pagination.sync="pagination"
       :items="histories">

@@ -1,6 +1,7 @@
 <template>
-  <panel title="Search">
+  <panel data-cy="panel-title" title="Search">
     <v-text-field
+      data-cy="search-input-field"
       label="Search by song title, artist, album, or genre"
       v-model="search"
     ></v-text-field>

@@ -1,24 +1,27 @@
 <template>
   <v-layout column>
     <v-flex xs6 offset-xs3>
-      <panel title="Login">
+      <panel data-cy="panel-title" title="Login">
         <v-text-field
+          data-cy="email"
           name="email"
           label="Email"
           v-model="email"
         ></v-text-field>
         <br>
         <v-text-field
+          data-cy="password"
           name="password"
           label="Password"
           type="password"
           v-model="password"
         ></v-text-field>
         <br>
-        <div class="danger-alert" v-html="error" />
+        <div data-cy="alert" class="danger-alert" v-html="error" />
         <br>
         <v-btn
           dark
+          data-cy="login-button"
           name="loginBtn"
           class="cyan"
           @click="login">

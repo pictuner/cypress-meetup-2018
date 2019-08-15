@@ -1,8 +1,9 @@
 <template>
   <v-layout>
     <v-flex xs4>
-      <panel title="Song Metadata">
+      <panel data-cy="panel-title "title="Song Metadata">
         <v-text-field
+          data-cy="title"
           label="Title"
           required
           :rules="[required]"
@@ -11,6 +12,7 @@
         ></v-text-field>
 
         <v-text-field
+          data-cy="artist"
           label="Artist"
           required
           :rules="[required]"
@@ -19,6 +21,7 @@
         ></v-text-field>
 
         <v-text-field
+          data-cy="genre"
           label="Genre"
           required
           :rules="[required]"
@@ -27,6 +30,7 @@
         ></v-text-field>
 
         <v-text-field
+          data-cy="album"
           label="Album"
           required
           :rules="[required]"
@@ -35,6 +39,7 @@
         ></v-text-field>
 
         <v-text-field
+          data-cy="album-image-url"
           label="Album Image Url"
           required
           :rules="[required]"
@@ -43,6 +48,7 @@
         ></v-text-field>
 
         <v-text-field
+          data-cy="youTube-id"
           label="YouTube ID"
           required
           :rules="[required]"
@@ -53,8 +59,9 @@
     </v-flex>
 
     <v-flex xs8>
-      <panel title="Song Structure" class="ml-2">
+      <panel  data-cy="song-structure-panel" title="Song Structure" class="ml-2">
         <v-text-field
+          data-cy="tab"
           label="Tab"
           multi-line
           required
@@ -64,6 +71,7 @@
         ></v-text-field>
 
         <v-text-field
+          data-cy="lyrics"
           label="Lyrics"
           multi-line
           required
@@ -73,12 +81,13 @@
         ></v-text-field>
       </panel>
 
-      <div class="danger-alert" v-if="error">
+      <div data-cy="alert" class="danger-alert" v-if="error">
         {{error}}
       </div>
 
       <v-btn
         dark
+        data-cy="create-song-button"
         class="cyan"
         id="sngBtn"
         @click="create">

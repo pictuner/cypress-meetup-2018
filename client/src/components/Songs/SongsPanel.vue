@@ -1,5 +1,5 @@
 <template>
-  <panel title="Songs">
+  <panel data-cy="panel-title" title="Songs">
     <v-btn
       slot="action"
       :to="{
@@ -15,28 +15,29 @@
       <v-icon>add</v-icon>
     </v-btn>
 
-    <div 
+    <div
       v-for="song in songs"
       class="song"
       :key="song.id">
 
       <v-layout>
         <v-flex xs6>
-          <div class="song-title">
+          <div data-cy="song-title" class="song-title">
             {{song.title}}
           </div>
-          <div class="song-artist">
+          <div data-cy="song-artist" class="song-artist">
             {{song.artist}}
           </div>
-          <div class="song-genre">
+          <div data-cy="song-genre" class="song-genre">
             {{song.genre}}
           </div>
 
           <v-btn
             dark
+            data-cy="view-button"
             class="cyan"
             :to="{
-              name: 'song', 
+              name: 'song',
               params: {
                 songId: song.id
               }
@@ -46,7 +47,7 @@
         </v-flex>
 
         <v-flex xs6>
-          <img class="album-image" :src="song.albumImageUrl" />
+          <img data-cy="album-image"  class="album-image" :src="song.albumImageUrl" />
         </v-flex>
       </v-layout>
     </div>

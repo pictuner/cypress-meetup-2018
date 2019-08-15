@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <v-app>
-      <page-header />
-      
+      <page-header data-cy="page-header"/>
+
       <main>
         <v-container fluid>
           <router-view></router-view>

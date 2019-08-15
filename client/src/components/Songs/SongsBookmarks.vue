@@ -1,6 +1,7 @@
 <template>
-  <panel title="Bookmarks">
+  <panel data-cy="panel-title" title="Bookmarks">
     <v-data-table
+      data-cy="data-table"
       :headers="headers"
       :pagination.sync="pagination"
       :items="bookmarks">

@@ -2,7 +2,7 @@
   <v-layout>
     <v-flex xs6 v-if="isUserLoggedIn">
       <songs-bookmarks />
-      <recently-viewed-songs class="mt-2" />
+      <recently-viewed-songs data-cy="view-history" class="mt-2" />
     </v-flex>
 
     <v-flex :class="{
@@ -10,7 +10,7 @@
         xs6: isUserLoggedIn
       }" class="ml-2">
       <songs-search-panel />
-      <songs-panel class="mt-2" />
+      <songs-panel data-cy="songs-panel" class="mt-2"/>
     </v-flex>
   </v-layout>
 </template>

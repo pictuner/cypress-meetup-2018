@@ -1,17 +1,19 @@
 <template>
   <v-layout column>
     <v-flex xs6 offset-xs3>
-      <panel title="Register">
+      <panel data-cy="panel-title" title="Register">
         <form
           name="tab-tracker-form"
           autocomplete="off">
           <v-text-field
+            data-cy="email"
             name="email"
             label="Email"
             v-model="email"
           ></v-text-field>
           <br>
           <v-text-field
+            data-cy="password"
             name="password"
             label="Password"
             type="password"
@@ -20,10 +22,11 @@
           ></v-text-field>
         </form>
         <br>
-        <div class="danger-alert" v-html="error" />
+        <div data-cy="alert" class="danger-alert" v-html="error" />
         <br>
         <v-btn
           dark
+          data-cy="register-button"
           class="cyan"
           name="registerBtn"
           @click="register">
